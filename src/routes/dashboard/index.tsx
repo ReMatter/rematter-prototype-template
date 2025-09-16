@@ -1,5 +1,5 @@
 import { Row, Col, Card, Statistic, Typography } from 'antd'
-import { ArrowUpOutlined, ArrowDownOutlined, DollarOutlined, TrendingUpOutlined } from '@ant-design/icons'
+import { ArrowUpOutlined, ArrowDownOutlined, DollarOutlined, RiseOutlined } from '@ant-design/icons'
 
 const { Title } = Typography
 
@@ -41,7 +41,7 @@ export const Dashboard = () => {
               title="Active Positions"
               value={15}
               valueStyle={{ color: '#1890ff' }}
-              prefix={<TrendingUpOutlined />}
+              prefix={<RiseOutlined />}
             />
           </Card>
         </Col>
