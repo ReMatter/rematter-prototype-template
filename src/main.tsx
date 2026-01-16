@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ConfigProvider } from 'antd'
+import { ToastProvider } from './components/common/Toast'
 import './index.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ConfigProvider>
+    <ToastProvider>
       <App />
-    </ConfigProvider>
+    </ToastProvider>
   </StrictMode>,
 )
