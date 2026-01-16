@@ -1,0 +1,135 @@
+/* Inventory Page Styles */
+
+.inventory-page {
+  padding: 24px;
+  height: 100%;
+  overflow: auto;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.inventory-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inventory-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #071429;
+  margin: 0;
+}
+
+.inventory-subtitle {
+  font-size: 14px;
+  color: rgba(7, 20, 41, 0.5);
+}
+
+.inventory-header-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Stats Cards */
+.inventory-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inventory-stat-card {
+  padding: 20px !important;
+}
+
+.inventory-stat-label {
+  font-size: 13px;
+  color: rgba(7, 20, 41, 0.5);
+  margin-bottom: 8px;
+}
+
+.inventory-stat-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #071429;
+}
+
+.inventory-stat-incoming {
+  color: #3f8600;
+}
+
+.inventory-stat-outgoing {
+  color: #cf1322;
+}
+
+/* Warnings Banner */
+.inventory-warnings-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fff2e8;
+  border: 1px solid #ffbb96;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.inventory-warnings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fa541c;
+}
+
+.inventory-warnings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inventory-warnings-content strong {
+  font-size: 14px;
+  color: #d4380d;
+}
+
+.inventory-warnings-list {
+  font-size: 13px;
+  color: rgba(212, 56, 13, 0.8);
+}
+
+/* Content Area */
+.inventory-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(7, 20, 41, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .inventory-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .inventory-header-right {
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+/* Link Order Modal Styles */
+
+.link-order-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-order-modal-search {
+  width: 100%;
+}
+
+.link-order-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(7, 20, 41, 0.1);
+}
+
+.link-order-modal-select-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(7, 20, 41, 0.7);
+}
+
+.link-order-modal-select-all input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2768E7;
+}
+
+.link-order-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.link-order-modal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.link-order-modal-item:hover {
+  background: #F8F9FB;
+  border-color: rgba(7, 20, 41, 0.2);
+}
+
+.link-order-modal-item.selected {
+  background: rgba(39, 104, 231, 0.05);
+  border-color: #2768E7;
+}
+
+.link-order-modal-item-checkbox {
+  padding-top: 2px;
+}
+
+.link-order-modal-item-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2768E7;
+}
+
+.link-order-modal-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.link-order-modal-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.link-order-modal-item-number {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #071429;
+}
+
+.link-order-modal-item-party {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #071429;
+  margin-bottom: 4px;
+}
+
+.link-order-modal-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  color: rgba(7, 20, 41, 0.5);
+}
+
+.link-order-modal-item-separator {
+  color: rgba(7, 20, 41, 0.3);
+}
+
+.link-order-modal-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: rgba(7, 20, 41, 0.5);
+  background: #F8F9FB;
+  border-radius: 8px;
+}
+
+/* Constraint message banner */
+.link-order-modal-constraint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(39, 104, 231, 0.08);
+  border: 1px solid rgba(39, 104, 231, 0.2);
+  border-radius: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: #2768E7;
+}
+
+.link-order-modal-constraint svg {
+  flex-shrink: 0;
+}
+
+/* Disabled state for items at selection limit */
+.link-order-modal-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.link-order-modal-item.disabled:hover {
+  background: #FFFFFF;
+  border-color: rgba(7, 20, 41, 0.1);
+}
+
+.link-order-modal-item.disabled .link-order-modal-item-checkbox input[type="checkbox"] {
+  cursor: not-allowed;
+}

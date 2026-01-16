@@ -1,0 +1,104 @@
+/* Default Pricing Section */
+.default-pricing-section {
+  margin-bottom: 32px;
+}
+
+.default-pricing-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+}
+
+.default-pricing-description {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+.default-pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.default-pricing-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.default-pricing-card.clickable {
+  cursor: pointer;
+}
+
+.default-pricing-card.clickable:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.default-pricing-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.default-pricing-card-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.default-pricing-card-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.default-pricing-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.default-pricing-card-empty {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.default-pricing-card-empty p {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 12px;
+}
+
+/* Group Pricing Section */
+.group-pricing-section {
+  /* No additional styling needed, uses existing table styles */
+}
+
+.group-pricing-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+}
+
+.group-pricing-description {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .default-pricing-cards {
+    grid-template-columns: 1fr;
+  }
+}
