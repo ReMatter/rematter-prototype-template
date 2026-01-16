@@ -1,0 +1,1258 @@
+/* EntityDrawer Styles - Exact Figma Spec */
+
+/* Modal Overlay */
+.entity-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+/* Modal Container */
+.entity-drawer-modal {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: fixed;
+  width: 600px;
+  height: calc(100vh - 40px);
+  right: 20px;
+  top: 20px;
+
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 8px 40px rgba(7, 20, 41, 0.15);
+  z-index: 1001;
+  outline: none;
+}
+
+.entity-drawer-dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+/* Header */
+.entity-drawer-header {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 24px 16px;
+  gap: 12px;
+
+  width: 100%;
+
+  background: #FFFFFF;
+  border-radius: 10px 10px 0px 0px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 21728 - Header Row */
+.entity-drawer-header-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  width: 100%;
+  height: 30px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Create Purchase Order - Title */
+.entity-drawer-title {
+  height: 28px;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: #071429;
+  margin: 0;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Frame 193 - Close Button */
+.entity-drawer-close-btn {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3px;
+  gap: 16px;
+
+  width: 30px;
+  height: 30px;
+
+  background: rgba(7, 20, 41, 0.05);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.entity-drawer-close-btn:hover {
+  background: rgba(7, 20, 41, 0.1);
+}
+
+.entity-drawer-close-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #071429;
+}
+
+/* Steps Section */
+.entity-drawer-steps {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 24px 16px;
+  gap: 12px;
+
+  width: 100%;
+
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(7, 20, 41, 0.1);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Step Item Container */
+.entity-drawer-step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Step */
+.entity-drawer-step {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+
+  height: 26px;
+  cursor: default;
+
+  /* Inside auto layout */
+  flex: none;
+  flex-grow: 0;
+}
+
+.entity-drawer-step.clickable {
+  cursor: pointer;
+}
+
+/* number - Inactive */
+.entity-drawer-step-badge {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  gap: 10px;
+
+  width: 26px;
+  height: 26px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 4px;
+
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+
+  color: rgba(7, 20, 41, 0.6);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* number - Active */
+.entity-drawer-step.active .entity-drawer-step-badge {
+  background: #FFFFFF;
+  border: 1.5px solid #1CB285;
+  color: #1CB285;
+}
+
+/* number - Completed (filled green with checkmark) */
+.entity-drawer-step.completed .entity-drawer-step-badge {
+  background: #1CB285;
+  border: 1.5px solid #1CB285;
+  color: #FFFFFF;
+}
+
+/* Step title - Inactive */
+.entity-drawer-step-title {
+  height: 22px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: rgba(7, 20, 41, 0.75);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Step title - Active/Completed */
+.entity-drawer-step.active .entity-drawer-step-title,
+.entity-drawer-step.completed .entity-drawer-step-title {
+  font-weight: 500;
+  color: #1CB285;
+}
+
+/* Divider */
+.entity-drawer-step-divider {
+  width: 16px;
+  height: 0px;
+
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 5px;
+
+  /* Inside auto layout */
+  flex: none;
+  flex-grow: 0;
+}
+
+.entity-drawer-step-divider.completed {
+  border-color: #1CB285;
+}
+
+/* Frame 21138 - Content Area */
+.entity-drawer-content {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 24px;
+  gap: 20px;
+
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+
+  background: #FFFFFF;
+  border-radius: 0px;
+
+  /* Inside auto layout */
+  order: 2;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Task Details / Form Section */
+.entity-drawer-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 100%;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Section Title - e.g., "Contract Info" */
+.entity-drawer-section-title {
+  height: 24px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #071429;
+  margin: 0;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.entity-drawer-section-description {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(7, 20, 41, 0.6);
+  margin: -8px 0 0 0;
+}
+
+.entity-drawer-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Frame - Form Row (two columns) */
+.entity-drawer-form-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  width: 100%;
+
+  /* Inside auto layout */
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Input Container */
+.entity-drawer-field {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+
+  flex: 1;
+  min-width: 0;
+  height: 66px;
+
+  /* Inside auto layout */
+  order: 0;
+}
+
+.entity-drawer-field.full-width {
+  width: 100%;
+  flex: none;
+}
+
+/* Form Label Horizontal */
+.entity-drawer-label {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  height: 22px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Input Label */
+.entity-drawer-label-text {
+  height: 22px;
+
+  /* Text Base/Strong */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #071429;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Required asterisk */
+.entity-drawer-label-required {
+  width: 7px;
+  height: 22px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #DF173E;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Field Error */
+.entity-drawer-field-error {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #DF173E;
+  margin-top: 2px;
+}
+
+/* Input */
+.entity-drawer-input {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 10px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #071429;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.entity-drawer-input::placeholder {
+  color: rgba(7, 20, 41, 0.6);
+}
+
+.entity-drawer-input:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-input:focus {
+  outline: none;
+  border-color: #2768E7;
+  box-shadow: 0 0 0 2px rgba(39, 104, 231, 0.1);
+}
+
+/* Full-width input */
+.entity-drawer-field.full-width .entity-drawer-input,
+.entity-drawer-field.full-width .entity-drawer-textarea,
+.entity-drawer-field.full-width .entity-drawer-select,
+.entity-drawer-field.full-width .entity-drawer-combobox {
+  width: 100%;
+}
+
+/* Textarea */
+.entity-drawer-textarea {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  width: 100%;
+  min-height: 80px;
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #071429;
+  resize: vertical;
+}
+
+.entity-drawer-textarea::placeholder {
+  color: rgba(7, 20, 41, 0.6);
+}
+
+.entity-drawer-textarea:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-textarea:focus {
+  outline: none;
+  border-color: #2768E7;
+  box-shadow: 0 0 0 2px rgba(39, 104, 231, 0.1);
+}
+
+/* Select */
+.entity-drawer-select {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 4px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #071429;
+
+  cursor: pointer;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.entity-drawer-select:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-select[data-focused="true"],
+.entity-drawer-select[data-focus-visible="true"] {
+  outline: none;
+  border-color: #2768E7;
+  box-shadow: 0 0 0 2px rgba(39, 104, 231, 0.1);
+}
+
+.entity-drawer-select-value {
+  width: 225px;
+  height: 40px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+
+  color: #071429;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entity-drawer-select-value .placeholder {
+  color: rgba(7, 20, 41, 0.6);
+}
+
+/* LuChevronDown */
+.entity-drawer-select-icon {
+  width: 18px;
+  height: 18px;
+  color: rgba(7, 20, 41, 0.6);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Select Popover */
+.entity-drawer-select-popover {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4px;
+
+  background: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0px 4px 16px rgba(7, 20, 41, 0.12);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1100;
+}
+
+.entity-drawer-select-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.entity-drawer-select-option[data-focused="true"] {
+  background: rgba(7, 20, 41, 0.05);
+}
+
+.entity-drawer-select-option[data-selected="true"] {
+  background: rgba(39, 104, 231, 0.1);
+  color: #2768E7;
+}
+
+/* ComboBox (searchable select) */
+.entity-drawer-combobox {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.entity-drawer-combobox-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.entity-drawer-combobox-wrapper:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-combobox[data-focused] .entity-drawer-combobox-wrapper {
+  border-color: #2768E7;
+  box-shadow: 0 0 0 2px rgba(39, 104, 231, 0.1);
+}
+
+.entity-drawer-combobox-input {
+  flex: 1;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #071429;
+}
+
+.entity-drawer-combobox-input::placeholder {
+  color: rgba(7, 20, 41, 0.6);
+}
+
+.entity-drawer-combobox-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.entity-drawer-combobox-button:hover {
+  background: rgba(7, 20, 41, 0.05);
+}
+
+.entity-drawer-combobox-icon {
+  width: 18px;
+  height: 18px;
+  color: rgba(7, 20, 41, 0.6);
+}
+
+.entity-drawer-combobox-listbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.entity-drawer-combobox-empty {
+  padding: 8px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(7, 20, 41, 0.6);
+  text-align: center;
+}
+
+/* DatePicker */
+.entity-drawer-datepicker {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 4px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.entity-drawer-datepicker:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-datepicker[data-focus-within="true"] {
+  outline: none;
+  border-color: #2768E7;
+  box-shadow: 0 0 0 2px rgba(39, 104, 231, 0.1);
+}
+
+.entity-drawer-datepicker-value {
+  width: 225px;
+  height: 24px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #071429;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* Date Segment */
+.entity-drawer-date-segment {
+  padding: 0 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #071429;
+  border-radius: 2px;
+  outline: none;
+}
+
+.entity-drawer-date-segment:focus {
+  background: rgba(39, 104, 231, 0.1);
+  color: #2768E7;
+}
+
+.entity-drawer-date-segment[data-placeholder="true"] {
+  color: rgba(7, 20, 41, 0.6);
+}
+
+/* LuCalendar */
+.entity-drawer-datepicker-icon {
+  width: 18px;
+  height: 18px;
+  color: rgba(7, 20, 41, 0.6);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.entity-drawer-datepicker-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Calendar Popover */
+.entity-drawer-calendar-popover {
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(7, 20, 41, 0.15);
+  padding: 16px;
+  z-index: 1100;
+}
+
+.entity-drawer-calendar-dialog {
+  outline: none;
+}
+
+.entity-drawer-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.entity-drawer-calendar-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #071429;
+  margin: 0;
+}
+
+.entity-drawer-calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(7, 20, 41, 0.6);
+}
+
+.entity-drawer-calendar-nav:hover {
+  background: rgba(7, 20, 41, 0.05);
+  color: #071429;
+}
+
+.entity-drawer-calendar-grid {
+  border-collapse: collapse;
+}
+
+.entity-drawer-calendar-header-cell {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(7, 20, 41, 0.6);
+  padding: 4px 0;
+  width: 32px;
+  text-align: center;
+}
+
+.entity-drawer-calendar-cell {
+  width: 32px;
+  height: 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #071429;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.entity-drawer-calendar-cell:hover {
+  background: rgba(7, 20, 41, 0.05);
+}
+
+.entity-drawer-calendar-cell[data-focused] {
+  outline: 2px solid #2768E7;
+  outline-offset: -2px;
+}
+
+.entity-drawer-calendar-cell[data-selected] {
+  background: #2768E7;
+  color: #FFFFFF;
+}
+
+.entity-drawer-calendar-cell[data-outside-month] {
+  color: rgba(7, 20, 41, 0.3);
+}
+
+/* Buttons - Footer */
+.entity-drawer-footer {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 24px 20px;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 76px;
+
+  background: #FFFFFF;
+  border-top: 1px solid rgba(7, 20, 41, 0.1);
+  /* BottomBar */
+  box-shadow: 0px -4px 14px rgba(7, 20, 41, 0.05);
+  border-radius: 0px 0px 10px 10px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.entity-drawer-footer-left {
+  display: flex;
+  gap: 10px;
+  margin-right: auto;
+}
+
+.entity-drawer-footer-right {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+/* Button Base */
+.entity-drawer-btn {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  gap: 8px;
+
+  height: 40px;
+
+  border-radius: 8px;
+
+  /* Text */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  cursor: pointer;
+  border: none;
+}
+
+/* Button Default (Cancel, Back) */
+.entity-drawer-btn-default {
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  color: #071429;
+}
+
+.entity-drawer-btn-default:hover {
+  background: rgba(7, 20, 41, 0.05);
+  border-color: rgba(7, 20, 41, 0.3);
+}
+
+/* Back button with icon */
+.entity-drawer-btn-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.entity-drawer-btn-back svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Button Primary (Save, Next) */
+.entity-drawer-btn-primary {
+  background: #2768E7;
+  /* Component/Button/primaryShadow */
+  box-shadow: 0px 2px 0px rgba(39, 104, 231, 0.1);
+  color: #FFFFFF;
+}
+
+.entity-drawer-btn-primary:hover {
+  background: #1d5bd4;
+}
+
+.entity-drawer-btn-primary:disabled {
+  background: rgba(39, 104, 231, 0.5);
+  cursor: not-allowed;
+}
+
+/* Table Styles (for Line Items) */
+.entity-drawer-table {
+  width: 100%;
+  border: 1px solid rgba(7, 20, 41, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.entity-drawer-table-header {
+  display: flex;
+  background: #F8F9FB;
+  border-bottom: 1px solid rgba(7, 20, 41, 0.1);
+}
+
+.entity-drawer-table-header-cell {
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgba(7, 20, 41, 0.7);
+}
+
+.entity-drawer-table-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.entity-drawer-table-row {
+  display: flex;
+  border-bottom: 1px solid rgba(7, 20, 41, 0.05);
+}
+
+.entity-drawer-table-row:last-child {
+  border-bottom: none;
+}
+
+.entity-drawer-table-cell {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Make selects in table cells smaller */
+.entity-drawer-table-cell .entity-drawer-select {
+  width: 100%;
+  height: 32px;
+}
+
+.entity-drawer-table-cell .entity-drawer-select-value {
+  height: 32px;
+}
+
+.entity-drawer-table-cell .entity-drawer-combobox {
+  width: 100%;
+}
+
+.entity-drawer-table-cell .entity-drawer-combobox-wrapper {
+  height: 32px;
+}
+
+.entity-drawer-table-cell .entity-drawer-combobox-input {
+  font-size: 13px;
+}
+
+.entity-drawer-table-cell .entity-drawer-number-input {
+  height: 32px;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.entity-drawer-table-cell .entity-drawer-number-group--with-suffix {
+  height: 32px;
+}
+
+.entity-drawer-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #F8F9FB;
+  border-top: 1px solid rgba(7, 20, 41, 0.1);
+}
+
+.entity-drawer-table-subtotal {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #071429;
+}
+
+/* Add Line Item Button */
+.entity-drawer-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px dashed rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(7, 20, 41, 0.6);
+  cursor: pointer;
+}
+
+.entity-drawer-add-btn:hover {
+  border-color: #2768E7;
+  color: #2768E7;
+  background: rgba(39, 104, 231, 0.05);
+}
+
+/* Delete button for table rows */
+.entity-drawer-delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-delete-btn:hover {
+  background: rgba(223, 23, 62, 0.1);
+  color: #DF173E;
+}
+
+/* Number Input */
+.entity-drawer-number-input {
+  box-sizing: border-box;
+  padding: 0 12px;
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #071429;
+  text-align: right;
+}
+
+.entity-drawer-number-input:hover {
+  border-color: rgba(7, 20, 41, 0.4);
+}
+
+.entity-drawer-number-input:focus {
+  outline: none;
+  border-color: #2768E7;
+}
+
+.entity-drawer-number-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Number input with suffix - wrap input and suffix in a bordered container */
+.entity-drawer-number-group--with-suffix {
+  box-sizing: border-box;
+  padding: 0 8px 0 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  height: 40px;
+}
+
+.entity-drawer-number-group--with-suffix:focus-within {
+  border-color: #2768E7;
+}
+
+.entity-drawer-number-group--with-suffix .entity-drawer-number-input {
+  border: none;
+  background: transparent;
+  padding: 12px 8px;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+.entity-drawer-number-group--with-suffix .entity-drawer-number-input:focus {
+  outline: none;
+  border: none;
+}
+
+.entity-drawer-number-suffix {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(7, 20, 41, 0.6);
+  padding-left: 4px;
+  flex-shrink: 0;
+}

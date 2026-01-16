@@ -1,0 +1,331 @@
+/* LineItemsTable - Generalized line items table component */
+
+.line-items-section {
+  background: #ffffff;
+  border: 1px solid rgba(7, 20, 41, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Header */
+.line-items-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.line-items-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #071429;
+  margin: 0;
+}
+
+/* Toggle switch */
+.line-items-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #ffffff;
+  border: 1px solid rgba(7, 20, 41, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.line-items-toggle:hover {
+  border-color: rgba(7, 20, 41, 0.3);
+  background: rgba(7, 20, 41, 0.02);
+}
+
+.line-items-toggle:focus {
+  outline: none;
+  border-color: #2768e7;
+}
+
+.line-items-toggle-switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background: rgba(7, 20, 41, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.line-items-toggle-switch.active {
+  background: #2768e7;
+}
+
+.line-items-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.line-items-toggle-switch.active::after {
+  transform: translateX(16px);
+}
+
+.line-items-toggle-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+}
+
+.line-items-toggle-label strong {
+  font-weight: 600;
+}
+
+/* Table container */
+.line-items-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Header and rows use CSS Grid with dynamic template */
+.line-items-table-header,
+.line-items-table-row,
+.line-items-table-footer {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Header row */
+.line-items-table-header {
+  padding-bottom: 8px;
+}
+
+.line-items-table-header .line-items-table-cell {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(7, 20, 41, 0.6);
+}
+
+/* Body */
+.line-items-table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Cell base */
+.line-items-table-cell {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+/* Force all form elements to fill their grid cells */
+.line-items-table-cell [data-rac] {
+  width: 100%;
+}
+
+.line-items-table-cell .entity-drawer-select {
+  width: 100% !important;
+}
+
+/* Fix select value to be flexible so icon stays inside */
+.line-items-table-cell .entity-drawer-select-value {
+  width: auto !important;
+  flex: 1 1 auto !important;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Total display (read-only) */
+.line-items-total-display {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+  padding: 8px 12px;
+  background: rgba(7, 20, 41, 0.03);
+  border-radius: 6px;
+  text-align: right;
+  width: 100%;
+}
+
+/* Readonly value display */
+.line-items-readonly-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+  padding: 8px 0;
+}
+
+/* Empty state */
+.line-items-table-empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: rgba(7, 20, 41, 0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Delete button */
+.line-items-delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(7, 20, 41, 0.4);
+  transition: all 0.15s ease;
+}
+
+.line-items-delete-btn:hover {
+  background: rgba(255, 77, 79, 0.1);
+  color: #ff4d4f;
+}
+
+/* Footer */
+.line-items-table-footer {
+  padding-top: 12px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(7, 20, 41, 0.1);
+}
+
+.line-items-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(7, 20, 41, 0.6);
+}
+
+/* Stacked weight and quantity totals */
+.line-items-totals-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  width: 100%;
+}
+
+.line-items-weight-total {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(7, 20, 41, 0.6);
+  width: 100%;
+  text-align: right;
+}
+
+.line-items-weight-total strong {
+  font-weight: 600;
+  color: #071429;
+}
+
+.line-items-quantity-total {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(7, 20, 41, 0.6);
+  text-align: right;
+}
+
+.line-items-quantity-total strong {
+  font-weight: 600;
+  color: #071429;
+}
+
+.line-items-price-total {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+  width: 100%;
+  text-align: right;
+}
+
+/* Right-align footer cells for totals */
+.line-items-table-footer .line-items-table-cell:nth-last-child(2),
+.line-items-table-footer .line-items-table-cell:nth-last-child(3) {
+  justify-content: flex-end;
+}
+
+/* Add button */
+.line-items-add-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(7, 20, 41, 0.2);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #071429;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+.line-items-add-btn:hover {
+  border-color: #2768e7;
+  color: #2768e7;
+  background: rgba(39, 104, 231, 0.04);
+}
+
+.line-items-add-btn svg {
+  color: currentColor;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .line-items-section {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .line-items-table {
+    overflow-x: auto;
+  }
+
+  .line-items-table-header,
+  .line-items-table-row,
+  .line-items-table-footer {
+    min-width: 600px;
+  }
+
+  .line-items-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

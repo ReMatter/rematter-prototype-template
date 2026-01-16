@@ -1,0 +1,182 @@
+/* FileUpload Component Styles */
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Dropzone */
+.file-upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 4px;
+
+  background: #F8FAF9;
+  border: 1px dashed #10B981;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-dropzone:hover {
+  background: #F0FDF4;
+  border-color: #059669;
+}
+
+.file-upload-dropzone.dragging {
+  background: #ECFDF5;
+  border-color: #059669;
+  border-width: 2px;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #374151;
+}
+
+.file-upload-link {
+  color: #10B981;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.file-upload-hint {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #9CA3AF;
+}
+
+/* File List */
+.file-upload-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.file-upload-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+
+  width: 100px;
+
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+
+  position: relative;
+}
+
+.file-upload-item:hover .file-upload-item-actions {
+  opacity: 1;
+}
+
+.file-upload-item-preview {
+  width: 48px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F9FAFB;
+  border-radius: 4px;
+}
+
+.file-upload-item-preview svg {
+  width: 40px;
+  height: 50px;
+}
+
+.file-upload-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+}
+
+.file-upload-item-name {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #374151;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.file-upload-item-type {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #9CA3AF;
+  text-transform: uppercase;
+}
+
+.file-upload-item-actions {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.file-upload-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-item-btn.download {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+.file-upload-item-btn.download:hover {
+  background: #E5E7EB;
+  color: #374151;
+}
+
+.file-upload-item-btn.delete {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.file-upload-item-btn.delete:hover {
+  background: #FECACA;
+  color: #B91C1C;
+}
+
+.file-upload-item-btn svg {
+  width: 12px;
+  height: 12px;
+}
